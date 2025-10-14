@@ -1,0 +1,9 @@
+/* Estilos globais */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* tema escuro por padrão */
+  color: #e0e0e0;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

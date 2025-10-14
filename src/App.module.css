@@ -1,0 +1,116 @@
+/* App.module.css */
+
+/* Container base */
+.app {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tema claro */
+.light {
+  background-color: #f4f7fa;
+  color: #222;
+}
+
+/* Tema escuro */
+.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Título */
+.title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+/* Botão de tema */
+.themeToggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.themeButton {
+  background: none;
+  border: 2px solid currentColor;
+  color: inherit;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.themeButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown container */
+.selectContainer {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.dropdown {
+  padding: 12px;
+  width: 300px;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  background-color: inherit;
+  color: inherit;
+  font-size: 16px;
+}
+
+.dropdown:focus {
+  outline: 2px solid #64b5f6;
+}
+
+/* Data container */
+.dataContainer {
+  padding: 25px 30px;
+  border-radius: 10px;
+  border: 1px solid currentColor;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  background-color: inherit;
+}
+
+.dataContainer h2 {
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.dataContainer h4 {
+  font-weight: normal;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.dataRow {
+  margin-bottom: 12px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 6px;
+  opacity: 0.9;
+}
+
+.dataRow span {
+  font-weight: bold;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  opacity: 0.7;
+}
