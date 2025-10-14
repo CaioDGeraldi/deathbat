@@ -28,27 +28,26 @@
   font-size: 32px;
 }
 
-/* Botão de tema */
+/* Botão de tema fixo no canto superior direito */
 .themeToggle {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
 .themeButton {
   background: none;
-  border: 2px solid currentColor;
+  border: none;
   color: inherit;
-  font-size: 18px;
-  padding: 8px 16px;
-  border-radius: 8px;
+  font-size: 28px;
+  padding: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .themeButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.2);
 }
 
 /* Dropdown container */
@@ -63,7 +62,7 @@
   width: 300px;
   border-radius: 6px;
   border: 1px solid currentColor;
-  background-color: #ffffff; /* Claro por padrão */
+  background-color: #ffffff;
   color: #222;
   font-size: 16px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -71,7 +70,7 @@
 
 /* Estilo para dropdown no modo escuro */
 .dark .dropdown {
-  background-color: #1e1e1e; /* Fundo escuro sólido */
+  background-color: #1e1e1e;
   color: #e0e0e0;
   border: 1px solid #888;
 }

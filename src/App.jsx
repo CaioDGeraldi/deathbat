@@ -5,7 +5,7 @@ import { useTheme } from './ThemeContext.jsx';
 
 function App() {
   const API_KEY = "8mX7gZlFBm0bJ7jjhjg8atBpr5eGql72xYvIMpT4";
-  const { darkMode, toggleTheme } = useTheme(); // <- Aqui está a mudança
+  const { darkMode, toggleTheme } = useTheme();
 
   const [spots, setSpots] = useState(null);
   const [selectedSpotId, setSelectedSpotId] = useState(null);
@@ -64,16 +64,14 @@ function App() {
 
   return (
     <div className={`${styles.app} ${darkMode ? styles.dark : styles.light}`}>
-      <h1 className={styles.title}>Ponto de Coleta</h1>
-
+      {/* Botão de tema no canto superior direito */}
       <div className={styles.themeToggle}>
-        <button
-          className={styles.themeButton}
-          onClick={toggleTheme}
-        >
-          {darkMode ? '🌞 Modo Claro' : '🌙 Modo Escuro'}
+        <button className={styles.themeButton} onClick={toggleTheme}>
+          {darkMode ? '🌞' : '🌙'}
         </button>
       </div>
+
+      <h1 className={styles.title}>Ponto de Coleta</h1>
 
       {loadingSpots && <p className={styles.loading}>Carregando pontos...</p>}
 
