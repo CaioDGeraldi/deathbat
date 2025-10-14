@@ -63,9 +63,17 @@
   width: 300px;
   border-radius: 6px;
   border: 1px solid currentColor;
-  background-color: inherit;
-  color: inherit;
+  background-color: #ffffff; /* Claro por padrão */
+  color: #222;
   font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para dropdown no modo escuro */
+.dark .dropdown {
+  background-color: #1e1e1e; /* Fundo escuro sólido */
+  color: #e0e0e0;
+  border: 1px solid #888;
 }
 
 .dropdown:focus {

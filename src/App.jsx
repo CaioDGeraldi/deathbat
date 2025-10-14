@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './App.module.css';
+import { useTheme } from './ThemeContext.jsx';
 
 function App() {
   const API_KEY = "8mX7gZlFBm0bJ7jjhjg8atBpr5eGql72xYvIMpT4";
+  const { darkMode, toggleTheme } = useTheme(); // <- Aqui está a mudança
 
   const [spots, setSpots] = useState(null);
   const [selectedSpotId, setSelectedSpotId] = useState(null);
   const [spotData, setSpotData] = useState(null);
   const [loadingSpots, setLoadingSpots] = useState(false);
   const [loadingSpotData, setLoadingSpotData] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const getSpots = async () => {
@@ -32,12 +33,6 @@ function App() {
 
     getSpots();
   }, []);
-
-  useEffect(() => {
-    document.body.style.backgroundColor = darkMode ? '#121212' : '#f4f7fa';
-    document.body.style.color = darkMode ? '#e0e0e0' : '#222';
-  }, [darkMode]);
-  
 
   useEffect(() => {
     const getSpotData = async () => {
@@ -74,7 +69,7 @@ function App() {
       <div className={styles.themeToggle}>
         <button
           className={styles.themeButton}
-          onClick={() => setDarkMode(!darkMode)}
+          onClick={toggleTheme}
         >
           {darkMode ? '🌞 Modo Claro' : '🌙 Modo Escuro'}
         </button>
@@ -117,6 +112,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
